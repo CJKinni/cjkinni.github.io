@@ -44,7 +44,7 @@ html {
 }
 
 /*Ensure our headers don't modify the text durastically*/
-h1, h2, h3, h4, h5, h6, strong, em, code, blockquote { 
+h1, h2, h3, h4, h5, h6, strong, code, blockquote { 
   font-size:  1rem;
   font-style:  normal;
   font-family: var(--monospace-font-family);
