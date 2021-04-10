@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p>
+          <a href="/">cjkinni</a> &mdash; <a class="dark-switch" href="#">light</a>
+        </p>
+      </header>
+      <content>
+        <h1>A simple static site generator in Elixir</h1>
+        <p>Inspired in large part by <a href="https://twitter.com/code_report">Conor Hoekstra</a>, I've been getting more into functional programming over the past few months.  I've been consuming a lot of functional programming content, and tryign to work more pure functions into my programming, but until this week, I haven't spent much time doing development in a functional language.</p><p>This week, I've built two working things in <a href="https://elixir-lang.org">Elixir</a>.  </p><p>First, there's a proxy server to assist me in developing against heavily ratelimited APIs.  It's using Phoenix, and I had it up in running from never having written a line of Elixir in about six hours (much of which was spent navigating RFCs to make sure I completely understood how HTTP and HTTPs proxies work.)</p><p>Second, is the little tool I'm using to generate this site, <a href="https://github.com/CJKinni/BlogEngine">CJKinni/BlogEngine</a>.  It's basically a MVP static-site generator.  That is, it takes a folder of <a href="https://daringfireball.net/projects/markdown/">Markdown</a> formatted documents and spits out a table of context and some nicely formatted blog posts.  Eventually I'll add an Atom feed, and maybe some other nice features.  This was an evening project today, and it took about two hours while watching TV with Laura.  It's <em>very</em> janky, but it's also <em>very</em> simple, which I like.</p><p>I enjoyed writing the code.  I'm still not sure what the result of my deep dive into category theory will be, but for now I'm enjoying the ride.</p>
+      </content>
+      <hr>
+      <footer>
+        <p>Be nice.</p>
+      </footer>
+    </div>
+  </body>
+  <script src="/dark-switch.js" defer></script>
+</html>
