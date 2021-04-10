@@ -1,0 +1,118 @@
+
+:root {
+  --background-color-dark: DarkSlateGray;
+  --foreground-color-dark: ivory;
+
+  --background-color-light: ivory;
+  --foreground-color-light: DarkSlateGray;
+
+  --link-dark: violet;
+  --link-light: blueviolet;
+
+  --accent-light: lavenderblush;
+  --accent-dark: darkslateblue;
+  
+  --monospace-font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+}
+
+body, body.light-theme {
+  --background-color: var(--background-color-light);
+  --foreground-color: var(--foreground-color-light);
+  --link:  var(--link-light);
+  --accent:  var(--accent-light);
+}
+
+body.dark-theme {
+  --background-color: var(--background-color-dark);
+  --foreground-color: var(--foreground-color-dark);
+  --link:  var(--link-dark);
+  --accent:  var(--accent-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --background-color: var(--background-color-dark);
+    --foreground-color: var(--foreground-color-dark);
+    --link:  var(--link-dark);
+    --accent:  var(--accent-dark);
+  }
+}
+
+
+html {
+  font-size: 14px;
+}
+
+/*Ensure our headers don't modify the text durastically*/
+h1, h2, h3, h4, h5, h6, strong, em, code, blockquote { 
+  font-size:  1rem;
+  font-style:  normal;
+  font-family: var(--monospace-font-family);
+  overflow:  hidden;
+  position:  relative;
+  display:  table-cell;
+}
+
+h1:after {
+  position: absolute;
+  left: 0;
+  padding-top: .5rem;
+  content:  "--------------------------------------------------------------------------------";
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+    background-color: var(--accent);
+}
+
+::selection {
+  background: hotpink;
+}
+
+body {
+	background-color: var(--background-color);
+	font-family: var(--monospace-font-family);
+  box-sizing:  border-box;
+	font-size: 1rem;
+	font-style: normal;
+  line-height:  1.5rem;
+  color: var(--foreground-color);
+}
+
+.container { 
+  margin: 0 auto; /* Centered */
+  max-width: 80ch; /* 80 character max width */
+  word-wrap:break-word; /* Enforce our max width */
+}
+
+/* .short lets us make compact text, like code */
+.short * {
+  margin-block-start:  0rem;
+  margin-block-end:  0rem;
+}
+
+div.short {
+  margin-block-start:  1rem;
+}
+
+/* Our HR is an 80 character dash */
+hr {
+  border:  0;
+}
+
+hr:after { 
+  line-height:  2rem;
+  left: 0;
+  bottom:  0;
+  content:  "--------------------------------------------------------------------------------";
+}
+
+/*Any element after our footer shouldn't get pushed down*/
+hr ~ *, hr ~ * *, hr ~ * * * {
+  margin-block-start:  0rem;
+}
