@@ -6,6 +6,9 @@
   --background-color-light: ivory;
   --foreground-color-light: DarkSlateGray;
 
+  --code-dark: LemonChiffon;
+  --code-light: DarkMagenta;
+
   --link-dark: violet;
   --link-light: blueviolet;
 
@@ -18,6 +21,7 @@
 body, body.light-theme {
   --background-color: var(--background-color-light);
   --foreground-color: var(--foreground-color-light);
+  --code:  var(--code-light);
   --link:  var(--link-light);
   --accent:  var(--accent-light);
 }
@@ -25,6 +29,7 @@ body, body.light-theme {
 body.dark-theme {
   --background-color: var(--background-color-dark);
   --foreground-color: var(--foreground-color-dark);
+  --code:  var(--code-dark);
   --link:  var(--link-dark);
   --accent:  var(--accent-dark);
 }
@@ -33,6 +38,7 @@ body.dark-theme {
   body {
     --background-color: var(--background-color-dark);
     --foreground-color: var(--foreground-color-dark);
+    --code:  var(--code-dark);
     --link:  var(--link-dark);
     --accent:  var(--accent-dark);
   }
@@ -44,13 +50,17 @@ html {
 }
 
 /*Ensure our headers don't modify the text durastically*/
-h1, h2, h3, h4, h5, h6, strong, code, blockquote { 
+h1, h2, h3, h4, h5, h6, strong, blockquote { 
   font-size:  1rem;
   font-style:  normal;
   font-family: var(--monospace-font-family);
   overflow:  hidden;
   position:  relative;
   display:  table-cell;
+}
+
+code.inline {
+  color:  var(--code);
 }
 
 h1:after {
